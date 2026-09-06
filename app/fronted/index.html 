@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booster · control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>⏤ <span>booster</span></h1>
+            <div class="status-badge" id="statusBadge">● offline</div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="label">followers</div>
+                <div class="value" id="followers">—</div>
+                <div class="change" id="followersChange">waiting...</div>
+            </div>
+            <div class="card">
+                <div class="label">likes (7d)</div>
+                <div class="value" id="likes">—</div>
+                <div class="change" id="likesChange">waiting...</div>
+            </div>
+            <div class="card">
+                <div class="label">views (7d)</div>
+                <div class="value" id="views">—</div>
+                <div class="change" id="viewsChange">waiting...</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h3>⏤ campaign control</h3>
+            <div class="control-row">
+                <input type="text" id="targetInput" placeholder="video url or hashtag" value="https://www.tiktok.com/@example/video/123">
+                <input type="number" id="dailyLimit" placeholder="daily limit" value="35" style="min-width:120px; flex:0.3;">
+                <button class="btn btn-primary" id="startBtn">▶ start</button>
+                <button class="btn btn-secondary" id="pauseBtn">⏸ pause</button>
+                <button class="btn btn-danger" id="stopBtn">■ stop</button>
+            </div>
+        </div>
+
+        <div class="panel" style="margin-bottom:0;">
+            <h3>⏤ live log</h3>
+            <div class="log" id="logContainer">
+                <div class="line">waiting for campaign...</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
